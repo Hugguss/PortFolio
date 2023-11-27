@@ -840,6 +840,8 @@ footer  a:hover {
   .secheader2{
     display: none;
     width: 50%;
+    border-radius: 20px;
+    overflow: hidden;
     transition: 0.5s;
   }
   .page-header {
@@ -876,6 +878,9 @@ footer  a:hover {
     i {
       width: 100%;
     }
+  }
+  .about-model {
+    display: none;
   }
   .lenguajes p {
     font-size: 30px;
@@ -935,7 +940,7 @@ footer  a:hover {
     display: flex;
     justify-content: center;
     position: absolute;
-    top: 90px;
+    top: 89px;
     width: 145px;
     height: auto;
   }
