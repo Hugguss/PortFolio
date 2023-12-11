@@ -2,35 +2,23 @@
 // FUNCION HEADER------------------------------------------------------------------------------------------------------------
 
 var header = document.querySelector(".page-header");
-var toggleClass = "is-sticky";
+var sticky = "is-sticky";
 var stickyTimeout;
 
 window.addEventListener("scroll", () => {
  var currentScroll = window.scrollY;
-  
+// al hacer scroll hasta cierto punto de la pagina, el header se convertira en sticky, en este caso en 50
  if (currentScroll > 50) {
-    header.classList.add(toggleClass);
+    header.classList.add(sticky);
  } 
  else {
-    header.classList.remove(toggleClass);
+    header.classList.remove(sticky);
  }
-
-//  // Clear the timeout if it exists
-//  if (stickyTimeout) {
-//     clearTimeout(stickyTimeout);
-//  }
-
-//  // If the header is sticky, set a timeout to remove the class after a few seconds
-//  if (header.classList.contains(toggleClass)) {
-//     stickyTimeout = setTimeout(() => {
-//       header.classList.remove(toggleClass);
-//     }, 3000); // 3000 ms = 3 seconds
-//  }
 });
 
 
 
-// FUNCION BOTN ENVIAR------------------------------------------------------------------------------------------------------
+// FUNCION BOTON ENVIAR------------------------------------------------------------------------------------------------------
  function enviar(){
   let words = document.getElementById('campo1').value.split(' ');
   //Verifica que todos los campos esten completos
@@ -84,7 +72,7 @@ function eliminar() {
     buttonsStyling: true
   })
   swalWithBootstrapButtons.fire({
-    
+    // Al pulsar el boton aparecerá una alerta que pregunta si quieres eliminiar los datos
     title: '¿Quieres eliminar los datos?',
     icon: 'warning',
     showDenyButton: true,
